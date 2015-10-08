@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6F45DC99-5D35-41FD-B5E0-8E0E1C829946</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D78AAD1ECEE108F5E6A6CBD62CA24C664DD8926B</key>
+		<string>https://github.com/Spacebrew/ofxSpacebrew.git</string>
+		<key>EFD2235F0CBE03225B95F71696E3161F6231D8FC</key>
+		<string>https://github.com/dharma-guardian/ofDorsalHapticDisplay.git</string>
+		<key>FB950DA91696DB40601A43AFF1A56B2E39217374</key>
+		<string>https://github.com/labatrockwell/ofxLibwebsockets.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>amphisbaena/amphisbaena.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D78AAD1ECEE108F5E6A6CBD62CA24C664DD8926B</key>
+		<string>../../../../../addons/ofxSpacebrew</string>
+		<key>EFD2235F0CBE03225B95F71696E3161F6231D8FC</key>
+		<string>../../..</string>
+		<key>FB950DA91696DB40601A43AFF1A56B2E39217374</key>
+		<string>../../../../../addons/ofxLibwebsockets</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dharma-guardian/ofDorsalHapticDisplay.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EFD2235F0CBE03225B95F71696E3161F6231D8FC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EFD2235F0CBE03225B95F71696E3161F6231D8FC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofDorsalHapticDisplay</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FB950DA91696DB40601A43AFF1A56B2E39217374</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxLibwebsockets</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D78AAD1ECEE108F5E6A6CBD62CA24C664DD8926B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxSpacebrew</string>
+		</dict>
+	</array>
+</dict>
+</plist>
