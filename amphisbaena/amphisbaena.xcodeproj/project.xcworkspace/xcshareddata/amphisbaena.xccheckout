@@ -22,11 +22,11 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D78AAD1ECEE108F5E6A6CBD62CA24C664DD8926B</key>
-		<string>../../../../../addons/ofxSpacebrew</string>
+		<string>../../../../addons/ofxSpacebrew</string>
 		<key>EFD2235F0CBE03225B95F71696E3161F6231D8FC</key>
 		<string>../../..</string>
 		<key>FB950DA91696DB40601A43AFF1A56B2E39217374</key>
-		<string>../../../../../addons/ofxLibwebsockets</string>
+		<string>../../../../addons/ofxLibwebsockets</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/dharma-guardian/ofDorsalHapticDisplay.git</string>

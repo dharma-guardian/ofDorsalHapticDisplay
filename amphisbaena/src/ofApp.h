@@ -24,6 +24,8 @@ public:
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
+    void drawScene(bool);
+    
         Spacebrew::Connection spacebrew;
         void onMessage( Spacebrew::Message & msg );
     
@@ -34,6 +36,9 @@ public:
         //Viewports
         ofRectangle viewMain;
         ofRectangle viewSeat;
+    
+        //FBO for readinf out values
+        ofFbo scene;
     
         ofLight light;
         vehicle driver;

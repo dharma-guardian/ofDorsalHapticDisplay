@@ -27,8 +27,14 @@ void ofApp::setup(){
     
     // user + seat camera
     camEasyCam.setDistance(20);
-    camEasyCam.setFarClip(200);
     camEasyCam.setNearClip(0);
+    camEasyCam.setFarClip(200);
+    
+    camSeat.setPosition(0, 0, 0);
+    camSeat.lookAt(ofVec3f(0,0,-1));
+    camSeat.setFov(95);
+    camSeat.setNearClip(0);
+    camSeat.setFarClip(200);
     viewMain.x = 0;
     viewMain.y = 0;
     viewMain.width = ofGetWidth();
@@ -38,25 +44,46 @@ void ofApp::setup(){
     viewSeat.y = 0;
     viewSeat.width = ofGetWidth()/4;
     viewSeat.height = ofGetHeight()/4;
+    
+    scene.allocate(256, 256);
 
 
-//    camSeat.scale = 20;
+    //    camSeat.scale = 20;
+    ofEnableDepthTest();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    
+    scene.begin();
+    ofClear(0,0,0,255);
+        camSeat.begin();
+//            ofPushStyle();
+//            ofSetColor(0, 0, 255);
+//            ofRect(0, 0, 16, 16);
+//            ofPopStyle();
+            drawScene(false);
+        camSeat.end();
+    scene.end();
 }
 
-//--------------------------------------------------------------
-void ofApp::draw(){
+void ofApp::drawScene(bool bWithGrid) {
+    if(bWithGrid) {
+        ofPushStyle();
+        
+        ofSetColor(255, 100, 100);
+        
+        ofDrawGrid(20.0f);
+        
+        ofPopStyle();
+    }
     
-    camEasyCam.begin(viewMain);
+    ofEnableLighting();
+    
     //--
     // Draw Traffic
     ofPushStyle();
     light.enable();
-    //	light.setPosition(particles[0].position);
+    light.setPosition(ofVec3f(0,0,0));
     
     ofSetColor(255,0,0);
     
@@ -75,7 +102,19 @@ void ofApp::draw(){
     //--
     
     ofPopStyle();
+
+}
+
+//--------------------------------------------------------------
+void ofApp::draw(){
+    
+    camEasyCam.begin(viewMain);
+    drawScene(true);
     camEasyCam.end();
+    ofDisableDepthTest();
+    scene.draw(viewSeat);
+    ofEnableDepthTest();
+
 }
 
 
@@ -99,22 +138,22 @@ void ofApp::onMessage( Spacebrew::Message & msg ){
         
         if (msg.name == "trafficHeading") {
             for (int i = 0; i < values.size(); i++) {
-                traffic[i].heading = ofToFloat(msg.value);
+                traffic[i].heading = values[i];
             }
         }
         else if (msg.name == "trafficPositionX") {
             for (int i = 0; i < values.size(); i++) {
-                traffic[i].position.x = ofToFloat(msg.value);
+                traffic[i].position.x = values[i];
             }
         }
         else if (msg.name == "trafficPositionY") {
             for (int i = 0; i < values.size(); i++) {
-                traffic[i].position.y = ofToFloat(msg.value);
+                traffic[i].position.y = values[i];
             }
         }
         else if (msg.name == "trafficPositionZ") {
             for (int i = 0; i < values.size(); i++) {
-                traffic[i].position.z = ofToFloat(msg.value);
+                traffic[i].position.z = values[i];
             }
         }
         
